@@ -60,6 +60,10 @@ $ git merge upstream/master
 $ git push -f origin master
 ```
 
+## Pert Chart
+
+![Pertchart](img/Pert_chart.png)
+
 # License: 
 
 Authorized [MIT](LICENSE) License 
