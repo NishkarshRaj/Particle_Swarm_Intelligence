@@ -1,6 +1,17 @@
 # Minor Project I
 # An efficient approach to find the optimal network route using Swarm Intelligence.
 
+# Project SDLC Model => Iterative Enhancement Model
+
+We use Iterative enhancement model by creating a product backlog and dividing the whole project into sub modules which will be developed by all members in a distributed development environment using Git VCS.
+
+# Members:
+
+1. Documentation Head: [Harsh Joshi](https://www.github.com/josharsh)
+2. Design Head: [Priyanka Yadav](https://www.github.com/Priyanka488)
+3. Implementation Head: [Nishkarsh Raj](https://www.github.com/NishkarshRaj)
+4. Testing Head: [Lakshika Parihar](https://www.github.com/lakshika1064)
+
 # How to Collaborate:
 
 1. Fork the repository to your own GitHub account.
