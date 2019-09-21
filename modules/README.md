@@ -1,6 +1,6 @@
 # Product Backlog
 
-- [ ] File Handling to create .csv file for storing adjancy matrix - Module_1_CreateCSV.C
+- [x] File Handling to create .csv file for storing adjancy matrix - Module_1_CreateCSV.C
 
 - [ ] File Handling to show stored .csv files and access specified one by user input 
 
@@ -18,4 +18,4 @@
 
 - [ ] Prim's on Adjancy Matrix
 
-- [] PSO on Adjancy Matrix
+- [ ] PSO on Adjancy Matrix
