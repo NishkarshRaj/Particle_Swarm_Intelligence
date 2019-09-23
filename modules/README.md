@@ -4,7 +4,7 @@
 
 - [ ] File Handling to show stored .csv files and access specified one by user input 
 
-- [ ] Time calculator module
+- [X] Time calculator module - Module_2_TimeCalculator.c
 
 - [ ] Convert .csv file input to 2-D Array Matrix form of Adjancy Matrix
 
