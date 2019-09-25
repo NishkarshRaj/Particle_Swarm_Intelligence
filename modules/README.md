@@ -1,12 +1,12 @@
 # Product Backlog
 
-- [X] File Handling to create .csv file for storing adjancy matrix - Module_1_CreateCSV.C
+- [X] File Handling to create .csv file for storing adjancy matrix - Module_1_CreateCSV.c
 
-- [ ] File Handling to show stored .csv files and access specified one by user input 
+- [X] File Handling to show stored .csv files and access specified one by user input - Module_2_ReadCSV.c
 
 - [X] Time calculator module - Module_3_TimeCalculator.c
 
-- [ ] Convert .csv file input to 2-D Array Matrix form of Adjancy Matrix
+- [X] Convert .csv file input to 2-D Array Matrix form of Adjancy Matrix - Module_4_readCSV.c
 
 - [ ] Graphs using structures basics
 
