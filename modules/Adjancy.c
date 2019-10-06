@@ -37,13 +37,12 @@ int main()
 	{
 		ptr = (node*)malloc(sizeof(node));
 		printf("Enter the Unique number for Node: ");
-		scanf("%d",&(head->node_number));
+		scanf("%d",&(ptr->node_number));
 		ptr->list=NULL;
 		ptr->next=NULL;
 		if(i==0)
 		{
 			head=(node*)malloc(sizeof(node));
-			ptr->next=NULL;
 			head=ptr;	
 		}
 		else
@@ -59,9 +58,10 @@ int main()
 	////////////////////////////////////////////////
 	//Display the Linked List
 	p=head;
+	printf("%d\n",head->node_number);
 	while(p->next!=NULL)
 	{
-		printf("%d",ptr->node_number);
+		printf("%d\n",ptr->node_number);
 		p=p->next;
 	}
 	return 0;
