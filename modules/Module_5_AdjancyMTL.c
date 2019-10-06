@@ -49,12 +49,7 @@ for(int i=0;i<n;i++)
 	}
 }
 
-
-
-
-
-
-void main()
+int main()
 {
 NODE *ptr,*temp,*h[10];
 int n,a[10][10],i,j;
@@ -106,6 +101,7 @@ for(i=0;i<n;i++)			//from here we are converting the Adjacency matrix into Adjac
 
 printf("\n The Adjacency list \n");	//size of the list will be equal to the no. of vertices
 display(h,n);
+return 0;
 }
 
 
