@@ -12,6 +12,7 @@ struct node
 // Create a linked list
 int main()
 {
+	node *ptr,*head,*p;
 	int n,i,j;
 	scanf("%d",&n); //Number of vertex in the network
 	int matrix[n][n];
@@ -29,6 +30,39 @@ int main()
 			printf("%d\t",matrix[i][j]);
 		}
 		printf("\n");
+	}
+	////////////////////////////////////////////////
+	//Create Linked list for all the Nodes in Network
+	for(i=0;i<n;i++)
+	{
+		ptr = (node*)malloc(sizeof(node));
+		printf("Enter the Unique number for Node: ");
+		scanf("%d",&(head->node_number));
+		ptr->list=NULL;
+		ptr->next=NULL;
+		if(i==0)
+		{
+			head=(node*)malloc(sizeof(node));
+			ptr->next=NULL;
+			head=ptr;	
+		}
+		else
+		{
+			p=head;
+			while(p->next!=NULL)
+			{
+				p=p->next;
+			}
+			p->next=ptr;
+		}
+	}
+	////////////////////////////////////////////////
+	//Display the Linked List
+	p=head;
+	while(p->next!=NULL)
+	{
+		printf("%d",ptr->node_number);
+		p=p->next;
 	}
 	return 0;
 }
