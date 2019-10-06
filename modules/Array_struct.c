@@ -13,7 +13,7 @@ struct node
 int main()
 {
 	node *ptr,*head,*p;
-	int n,i,j;
+	int n,i,j,k;
 	scanf("%d",&n); //Number of vertex in the network
 	int matrix[n][n];
 	node *list1[n];
@@ -33,12 +33,15 @@ int main()
 		printf("\n");
 	}
 	////////////////////////////////////////////////
+k=1;
 	//Create Linked list for all the Nodes in Network
 	for(i=0;i<n;i++)
 	{
 		ptr = (node*)malloc(sizeof(node));
-		printf("Enter the Unique number for Node: ");
-		scanf("%d",&(ptr->node_number));
+		//printf("Enter the Unique number for Node: ");
+		//scanf("%d",&(ptr->node_number));
+ptr->node_number=k;
+k++;
 		//ptr->list=NULL;
 		ptr->next=NULL;
 		list1[i]=(node*)malloc(sizeof(node));
@@ -77,24 +80,52 @@ int main()
 	p=head;
 	while(p->next!=NULL)
 	{
+//printf("Check 1\t");
 		j=0;
-		for(i=0;i<=n;i++)
+k=p->node_number;
+k--;
+		for(i=0;i<n;i++)
 		{
-			if(((matrix[(p->node_number)-1][i])!=0)&&(i!=(p->node_number-1)))
+//	printf("Check 2\t");
+			if((matrix[k][i]!=0)&&(i!=k))
 			{
+//printf("Check 3\n");
 				p->list[j++]=list1[i];	
 			}
 		}
+p=p->next;
 	}
+//printf("Check4");
+		j=0;
+k=p->node_number;
+k--;
+		for(i=0;i<n;i++)
+		{
+//	printf("Check 2\t");
+			if((matrix[k][i]!=0)&&(i!=k))
+			{
+//printf("Check 3\n");
+				p->list[j++]=list1[i];	
+			}
+		}
 	/////////////////////////////////////////////////
 	//Display Adjancy List
 	p=head;
 	while(p->next!=NULL)
 	{
+printf("%d: ",p->node_number);
 		for(i=0;p->list[i]!=NULL;i++)
 		{
-			printf("%d",p->list[i]->node_number);
+			printf("%d\t",p->list[i]->node_number);
 		}
+printf("\n");
+p=p->next;
 	}
+printf("%d: ",p->node_number);
+		for(i=0;p->list[i]!=NULL;i++)
+		{
+			printf("%d\t",p->list[i]->node_number);
+		}
+printf("\n");
 	return 0;
 }
