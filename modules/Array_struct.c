@@ -80,9 +80,9 @@ int main()
 		j=0;
 		for(i=0;i<=n;i++)
 		{
-			if(((matrix[p->node_number-1][i])!=0)&&(i!=(p->node_number-1)))
+			if(((matrix[(p->node_number)-1][i])!=0)&&(i!=(p->node_number-1)))
 			{
-				p->list[j]=list1[i];	
+				p->list[j++]=list1[i];	
 			}
 		}
 	}
