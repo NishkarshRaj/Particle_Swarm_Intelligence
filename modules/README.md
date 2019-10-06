@@ -8,7 +8,7 @@
 
 - [X] Convert .csv file input to 2-D Array Matrix form of Adjancy Matrix - Module_4_readCSV.c
 
-- [ ] Convert Adjancy Matrix (2-D Array) to Adjancy List (Structure)
+- [X] Convert Adjancy Matrix (2-D Array) to Adjancy List (Structure) - Module_5_AdjancyMTL.c
 
 - [ ] Display network graphically using Structures
 
