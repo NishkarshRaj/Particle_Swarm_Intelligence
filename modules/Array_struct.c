@@ -72,5 +72,29 @@ int main()
 		p=p->next;
 	}
 	//printf("%d",list1[0]->node_number);
+	/////////////////////////////////////////////////
+	//Create List
+	p=head;
+	while(p->next!=NULL)
+	{
+		j=0;
+		for(i=0;i<=n;i++)
+		{
+			if(((matrix[p->node_number-1][i])!=0)&&(i!=(p->node_number-1)))
+			{
+				p->list[j]=list1[i];	
+			}
+		}
+	}
+	/////////////////////////////////////////////////
+	//Display Adjancy List
+	p=head;
+	while(p->next!=NULL)
+	{
+		for(i=0;p->list[i]!=NULL;i++)
+		{
+			printf("%d",p->list[i]->node_number);
+		}
+	}
 	return 0;
 }
