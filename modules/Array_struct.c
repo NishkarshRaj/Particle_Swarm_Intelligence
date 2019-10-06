@@ -67,5 +67,6 @@ int main()
 		printf("%d\n",ptr->node_number);
 		p=p->next;
 	}
+	//printf("%d",list[0]->node_number);
 	return 0;
 }
