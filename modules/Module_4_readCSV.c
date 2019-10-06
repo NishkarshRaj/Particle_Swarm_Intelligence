@@ -1,4 +1,6 @@
-#include < stdio.h > #include < string.h > #include <stdlib.h>     /* atoi */
+#include<stdio.h> 
+#include<string.h> 
+#include<stdlib.h>     /* atoi */
 
   #define NODES 50
 int main() {
@@ -50,7 +52,7 @@ int main() {
     // Closing the file using fclose() 
     fclose(filePointer);
 
-    printf("Data successfully read from file GfgTest.c\n");
+    printf("Data successfully read from specified file\n");
     printf("The file is now closed.\n");
     int array[k][k];
     for (int i = 0; i < k; i++) {
