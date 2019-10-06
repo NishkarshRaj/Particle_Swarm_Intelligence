@@ -39,7 +39,7 @@ int main()
 		ptr = (node*)malloc(sizeof(node));
 		printf("Enter the Unique number for Node: ");
 		scanf("%d",&(ptr->node_number));
-		ptr->list=NULL;
+		//ptr->list=NULL;
 		ptr->next=NULL;
 		list1[i]=(node*)malloc(sizeof(node));
 		for(j=0;j<20;j++)
