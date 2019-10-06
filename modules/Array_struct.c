@@ -7,7 +7,7 @@ struct node
 {
 	int node_number;
 	struct node *next; //for linked list of structures
-	struct node *list; //for Adjancy list
+	struct node *list[20]; //for Adjancy list
 };
 // Create a linked list
 int main()
@@ -16,7 +16,7 @@ int main()
 	int n,i,j;
 	scanf("%d",&n); //Number of vertex in the network
 	int matrix[n][n];
-	node *list[n];
+	node *list1[n];
 	for(i=0;i<n;i++)
 	{
 		for(j=0;j<n;j++)
@@ -41,7 +41,11 @@ int main()
 		scanf("%d",&(ptr->node_number));
 		ptr->list=NULL;
 		ptr->next=NULL;
-		list[i]=(node*)malloc(sizeof(node));
+		list1[i]=(node*)malloc(sizeof(node));
+		for(j=0;j<20;j++)
+		{
+			list1[i]->list[j]=NULL;
+		}
 		if(i==0)
 		{
 			head=(node*)malloc(sizeof(node));
@@ -56,7 +60,7 @@ int main()
 			}
 			p->next=ptr;
 		}
-		list[i]=ptr;
+		list1[i]=ptr;
 	}
 	////////////////////////////////////////////////
 	//Display the Linked List
@@ -67,6 +71,6 @@ int main()
 		printf("%d\n",ptr->node_number);
 		p=p->next;
 	}
-	//printf("%d",list[0]->node_number);
+	//printf("%d",list1[0]->node_number);
 	return 0;
 }
