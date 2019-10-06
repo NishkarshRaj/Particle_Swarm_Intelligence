@@ -14,7 +14,7 @@
          if((!ext) || (ext == dir->d_name))
            return 0;
          else {
-           if(strcmp(ext, ".out") == 0)
+           if(strcmp(ext, ".csv") == 0)
              return 1;
          }
      }
