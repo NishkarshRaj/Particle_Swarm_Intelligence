@@ -1,4 +1,6 @@
 # Product Backlog
+#### This section highlights the product backlog describing the features implementation history and to-do's.
+The Product Backlog is an ordered list of everything that is known to be needed in the product. It is the single source of requirements for any changes to be made to the product. 
 
 - [X] File Handling to create .csv file for storing adjancy matrix - Module_1_CreateCSV.c
 
@@ -12,8 +14,8 @@
 
 - [ ] Display network graphically using Structures
 
-- [ ] Kruskal's on Adjancy Matrix
+- [X] Kruskal's on Adjancy Matrix
 
-- [ ] Prim's on Adjancy Matrix
+- [X] Prim's on Adjancy Matrix
 
 - [ ] PSO on Adjancy Matrix
