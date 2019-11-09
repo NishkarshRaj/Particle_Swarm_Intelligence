@@ -59,9 +59,20 @@ static int parse_ext(const struct dirent *dir)
 }
 int main()
 {
+int ch1,n;
+printf("An efficient approach to optimize Network routing using Particle Swarm Intelligence\n\n");
+printf("Press 1) Create new graph\n");
+printf("Press 2) Use existing graph\n");
+printf("Enter your choice: ");
+scanf("%d",&ch1);
+switch(ch1)
+{
+case 1:
 	create_csv();
-	struct dirent **namelist;
-       int n;
+break;
+case 2:
+///////////// to get the .csv files in current directory
+struct dirent **namelist;
        n = scandir(".", &namelist, parse_ext, alphasort);
        if (n < 0) {
            perror("scandir");
@@ -74,4 +85,9 @@ int main()
            }
            free(namelist);
        }
+///////////////////
+break;
+default: printf("Wrong Choice! Exiting Code\n");
+}
+return 0;
 }
