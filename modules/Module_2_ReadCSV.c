@@ -1,7 +1,7 @@
- #include <string.h>
-   #include <stdio.h>
-   #include <stdlib.h>
-   #include <dirent.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <dirent.h>
 
    /* when return 1, scandir will put this dirent to the list */
    static int parse_ext(const struct dirent *dir)
