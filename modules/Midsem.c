@@ -2,20 +2,18 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<dirent.h>
+#include<time.h>
 #define NODES 50
 //User creates graph as .csv file
-void create_csv()
+void create_csv(char f1[100])
 {
 	printf("Creation of .csv file by user\n");
 	//Adjance Matrix is a square matrix n*n with n being the number of nodes in the network
 	int n,i,j,count=0;
-	char f1[100];
 	printf("Enter the number of nodes in network: ");
 	scanf("%d",&n);
 	int ds[100];
 	char temp[100];
-printf("Enter Unique Name of the graph: ");
-scanf("%s",&f1);
 	// Create a file pointer
 	FILE *fp;
 	// Create a .csv file
@@ -142,6 +140,7 @@ void readcsv(char f1[100])
 int main()
 {
 int ch1,n,count;
+char f1[100];
 printf("An efficient approach to optimize Network routing using Particle Swarm Intelligence\n\n");
 printf("Press 1) Create new graph\n");
 printf("Press 2) Use existing graph\n");
@@ -149,8 +148,9 @@ printf("Enter your choice: ");
 scanf("%d",&ch1);
 switch(ch1)
 {
-case 1:
-	create_csv();
+case 1: printf("Enter Unique Name of the graph: ");
+scanf("%s",&f1);
+	create_csv(f1);
 break;
 case 2:
 printf("Following are the existing .csv files in the current directory\n");

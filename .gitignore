@@ -1,4 +1,4 @@
 *.exe
 *.txt
 a.out
-.csv
+*.csv
