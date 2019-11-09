@@ -171,6 +171,8 @@ count++;
            free(namelist);
        }
 ///////////////////
+printf("Enter name of the file you want to use: ");
+scanf("%s",&f1);
 break;
 default: printf("Wrong Choice! Exiting Code\n");
 }
