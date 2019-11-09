@@ -62,7 +62,7 @@ static int parse_ext(const struct dirent *dir)
 }
 int main()
 {
-int ch1,n;
+int ch1,n,count;
 printf("An efficient approach to optimize Network routing using Particle Swarm Intelligence\n\n");
 printf("Press 1) Create new graph\n");
 printf("Press 2) Use existing graph\n");
@@ -74,8 +74,10 @@ case 1:
 	create_csv();
 break;
 case 2:
+printf("Following are the existing .csv files in the current directory\n");
 ///////////// to get the .csv files in current directory
 struct dirent **namelist;
+count=1;
        n = scandir(".", &namelist, parse_ext, alphasort);
        if (n < 0) {
            perror("scandir");
@@ -83,7 +85,8 @@ struct dirent **namelist;
        }
        else {
            while (n--) {
-               printf("%s\n", namelist[n]->d_name);
+               printf("%d: %s\n",count, namelist[n]->d_name);
+count++;
                free(namelist[n]);
            }
            free(namelist);
