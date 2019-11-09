@@ -16,12 +16,10 @@ struct node
 };
 
 // Create a linked list-> Adjancy List from Adjancy Matrix
-void adjancylist_maker()
+void adjancylist_maker(int n,int matrix[100][100])
 {
 	node *ptr,*head,*p;
-	int n,i,j,k;
-	scanf("%d",&n); //Number of vertex in the network
-	int matrix[n][n];
+	int i,j,k;
 	node *list1[n];
 	for(i=0;i<n;i++)
 	{
@@ -265,6 +263,8 @@ void readcsv(char f1[100])
       }
       printf("\n");
     }
+    ////
+    adjancylist_maker(k,array);
   }
 }
 
