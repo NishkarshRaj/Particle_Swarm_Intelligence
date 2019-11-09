@@ -9,7 +9,7 @@ struct node
 	struct node *next; //for linked list of structures
 	struct node *list[20]; //for Adjancy list
 };
-// Create a linked list
+// Create a linked list-> Adjancy List from Adjancy Matrix
 int main()
 {
 	node *ptr,*head,*p;
