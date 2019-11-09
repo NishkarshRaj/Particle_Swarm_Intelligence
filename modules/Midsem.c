@@ -2,7 +2,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<dirent.h>
-void select_csv()
+//User creates graph as .csv file
+void create_csv()
 {
 	printf("Creation of .csv file by user\n");
 	//Adjance Matrix is a square matrix n*n with n being the number of nodes in the network
@@ -37,6 +38,8 @@ void select_csv()
 	}
 	fclose(fp);
 }
+
+//method to find the .csv file in current folder
 static int parse_ext(const struct dirent *dir)
    {
      if(!dir)
@@ -56,7 +59,7 @@ static int parse_ext(const struct dirent *dir)
 }
 int main()
 {
-	select_csv();
+	create_csv();
 	struct dirent **namelist;
        int n;
        n = scandir(".", &namelist, parse_ext, alphasort);
