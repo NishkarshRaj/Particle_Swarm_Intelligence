@@ -174,5 +174,7 @@ count++;
 break;
 default: printf("Wrong Choice! Exiting Code\n");
 }
+//Running Module 4 Read CSV
+readcsv(f1);
 return 0;
 }
