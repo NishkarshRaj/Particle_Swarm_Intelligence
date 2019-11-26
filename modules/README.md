@@ -14,8 +14,10 @@ The Product Backlog is an ordered list of everything that is known to be needed 
 
 - [ ] Display network graphically using Structures
 
-- [X] Kruskal's on Adjancy Matrix
+- [X] Kruskal's on Adjancy Matrix - Module-7-Kruskal-implementation.c
 
-- [X] Prim's on Adjancy Matrix
+- [X] Prim's on Adjancy Matrix - Module-8-Prims-implementation.c
+
+- [X] Random Number Generator Module - Module_9_Random.c
 
 - [ ] PSO on Adjancy Matrix
