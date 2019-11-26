@@ -5,17 +5,9 @@
 #include<time.h> //To generate Random numbers each and every time rather than getting same random number 
 //Time function is needed to generate dynamic numbers at runtime because rand() is compiled time executed and generates same number on multiple execution
   
-int random_generator()
+float random_generator()
 {
-	return (rand());
-}  
-  
-// Driver program 
-int main(void) 
-{ 
-	//Initialization used to call only once
-	srand(time(0)); 
-	register int x = random_generator(); //Using register storage class for faster access
+	register int x = rand(); //Using register storage class for faster access
 	//printf("%d",x); Yes every time new random integer is generated
 	//How to convert any integer number into a float between 0 and 1
 	//Divide the number by 10^(number of digits)
@@ -26,10 +18,19 @@ int main(void)
 	    count++;
 	    temp=temp/10;
 	}
-	printf("%d\n%d\n",x,count);
+	//printf("%d\n%d\n",x,count);
 	temp = pow(10,count); //using same variable again to save memory
 	float answer = (float)x/temp;
-	printf("%f\n",answer);
+	//printf("%f\n",answer);
+	return (answer);
+}  
+  
+// Driver program 
+int main(void) 
+{ 
+	//Initialization used to call only once
+	srand(time(0)); 
+	printf("%f\n%f\n%f\n",random_generator(),random_generator(),random_generator());
     return 0; 
 } 
 
