@@ -22,7 +22,7 @@ float random_generator()
 	temp = pow(10,count); //using same variable again to save memory
 	float answer = (float)x/temp;
 	//printf("%f\n",answer);
-	return (answer);
+	return abs(answer);
 }  
   
 // Driver program 
