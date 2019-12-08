@@ -44,36 +44,22 @@ void PSO(float cost[][50],int x)
 {   
     int inMST[n]; 
 float k;
-    int r,c; //iterate the cost matrix
     // Include first vertex in MST 
     inMST[0] = 1; 
     // Keep adding edges while number of included 
     // edges does not become V-1. 
     int edge_count = 0;
 float mincost = 0;
-///Randomize cost
-//For each iteration, first change the cost of each edge with different random parameters
-            //formulae: edgecost = edgecost + edgecost*(random number between 0 and 1) //Cost can only increase and never decrease due to random parameters
-            for(r=0;r<x;r++)
-            {
-            	for(c=0;c<x;c++)
-            	{
-k=random_generator();
-            		cost[r][c]= cost[r][c] + cost[r][c]*k;
- 				}
-			}
-///
- 
     while (edge_count < x - 1) { 
         // Find minimum weight valid edge.   
         float min = INT_MAX;
  int a = -1, b = -1; 
         for (int i = 0; i < x; i++) { 
             for (int j = 0; j < x; j++) {                
-            
-                if (cost[i][j] < min) { 
+k=random_generator();
+                if ((cost[i][j] + cost[i][j]*k) < min) { 
                     if (isValidEdge(i, j, inMST)) { 
-                        min = cost[i][j]; 
+                        min = (cost[i][j] + cost[i][j]*k); 
                         a = i; 
                         b = j; 
                     } 
