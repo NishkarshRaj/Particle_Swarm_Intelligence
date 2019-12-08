@@ -142,7 +142,7 @@ void readcsv(char f1[100])
   // which maybe if the file does not exist 
   if (filePointer == NULL) {
   	system("reset");
-    printf("Selected file failed to open\n");
+    printf("Selected file failed to open\n Exiting the code\n\n");
     exit(1);
   } else {
   	system("reset");
@@ -319,7 +319,7 @@ printf("\n");
   			break;
   		default: flag41=0; printf("Wrong Choice: Retry\n");
 	}
-	system("reset");
+	//system("reset");
   }while(flag41==0);
 }
 
