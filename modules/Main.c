@@ -142,7 +142,7 @@ void readcsv(char f1[100])
   // which maybe if the file does not exist 
   if (filePointer == NULL) {
   	system("reset");
-    printf("Selected file failed to open.");
+    printf("Selected file failed to open\n");
     exit(1);
   } else {
   	system("reset");
@@ -367,7 +367,7 @@ count++;
 printf("Enter name of the file you want to use: ");
 scanf("%s",&f1);
 break;
-default: printf("Wrong Choice! Exiting Code\n");
+default: printf("Wrong Choice! Exiting Code\n"); exit(1);
 }
 //Running Module 4 Read CSV -> For Reading the .csv file and creating a 2D array
 readcsv(f1); //Causing Segmentation Fault
