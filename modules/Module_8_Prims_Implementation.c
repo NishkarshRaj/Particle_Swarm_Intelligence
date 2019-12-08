@@ -1,6 +1,8 @@
 #include <stdio.h> 
 #define INT_MAX 100000
 int n;
+
+//Prims Helper Function
 int isValidEdge(int u, int v, int* inMST) 
 { 
    if (u == v) 
@@ -44,7 +46,7 @@ void primMST(int cost[][50],int x)
             inMST[b] = inMST[a] = 1; 
         } 
     } 
-    printf("\n Minimum cost= %d \n", mincost); 
+    printf("\nMinimum cost= %d \n", mincost); 
 } 
 
 int main() 
