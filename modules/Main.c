@@ -168,6 +168,7 @@ struct node
 //PSO Function
 void PSO(int c[][50],int x) 
 {   
+clock_t start = clock();
 int i,j;
 float cost[50][50];
 for(i=0;i<n;i++)
@@ -208,7 +209,11 @@ k=random_generator();
             inMST[b] = inMST[a] = 1; 
         } 
     } 
-    printf("\n Minimum cost= %f \n", mincost); 
+    printf("\nMinimum cost= %f \n", mincost); 
+    clock_t end = clock();
+    double time = ((double) (end - start))/CLOCKS_PER_SEC;
+    time=time*1000000;
+    printf("Processing Time: %f MicroSeconds\n",time);
 }
 
 //User creates graph as .csv file
