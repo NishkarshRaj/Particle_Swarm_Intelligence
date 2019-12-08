@@ -297,6 +297,7 @@ printf("\n");
   			break;
   		default: flag41=0; printf("Wrong Choice: Retry\n");
 	}
+	system("reset");
   }while(flag41==0);
 }
 
