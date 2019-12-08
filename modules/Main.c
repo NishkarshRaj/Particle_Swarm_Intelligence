@@ -251,7 +251,7 @@ void readcsv(char f1[100])
 node *ptr,*head,*p;
 	n=k;
 k=0;
-int matrix[n][n];
+int matrix[50][50];
 	node *list1[n];
 	for(i=0;i<n;i++)
 	{
@@ -259,6 +259,27 @@ int matrix[n][n];
 		{
 			matrix[i][j] = array[i][j];
 		}
+	}
+/////////////////Algorithms
+//////////////////////////////Till Now!! File Handling Completed!!! Also, Adjancy Matrix extracted and Its Adjancy List is created!!!!/////
+  int flag41;
+  	system("reset");
+  	printf("1. Perform Kruskal's Algorithm\n");
+  	printf("2. Perform Prim's Algorithm\n");
+  	printf("3. Perform PSO Algorithm\n");
+  	printf("Enter your choice: ");
+  	scanf("%d",&flag41);
+  	switch(flag41)
+  	{
+  		case 1:
+		  printf("Kruskal's Algorithm Application\n");
+		  kruskalMST(matrix,n); 
+  			break;
+  		case 2:
+  			break;
+  		case 3:
+  			break;
+  		default: printf("Wrong Choice: Retry\n");
 	}
 	////////////////////////////////////////////////
 k=1;
@@ -357,27 +378,6 @@ p=p->next;
 printf("\n");
   }
   system("reset");
-  //////////////////////////////Till Now!! File Handling Completed!!! Also, Adjancy Matrix extracted and Its Adjancy List is created!!!!/////
-  int flag41;
-  	system("reset");
-  	printf("1. Perform Kruskal's Algorithm\n");
-  	printf("2. Perform Prim's Algorithm\n");
-  	printf("3. Perform PSO Algorithm\n");
-  	printf("Enter your choice: ");
-	fflush(stdin);
-  	scanf("%d",&flag41);
-  	switch(flag41)
-  	{
-  		case 1:
-		  printf("Kruskal's Algorithm Application\n");
-		  kruskalMST(matrix,n); 
-  			break;
-  		case 2:
-  			break;
-  		case 3:
-  			break;
-  		default: printf("Wrong Choice: Retry\n");
-	}
 }
 
 ///////////////////////////////////////MAIN FUNCTION///////////////////////////
