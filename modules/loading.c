@@ -1,4 +1,4 @@
-#include<iostream>
+#include<stdio.h>
 #include<cstdlib>
 using namespace std;
 int main()
@@ -6,11 +6,11 @@ int main()
 int i;
 char ch;
 system("reset");
-cout<<"Hello, Enter any key to continue"<<endl;
-cin>>ch;
+printf("Hello, Enter any key to continue: ");
+scanf("%c",&ch);
 for(i=0;i<10000;i++)
 {
-cout<<"Loading Content "<<i+1<<endl;
+printf("Loading Content: %d\n",i+1);
 }
 system("reset");
 }
