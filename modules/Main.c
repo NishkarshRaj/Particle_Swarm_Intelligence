@@ -14,7 +14,7 @@ void loading()
 int i;
 char ch;
 system("reset");
-for(i=0;i<50000;i++)
+for(i=0;i<25000;i++)
 {
 printf("Loading Content: %d\n",i+1);
 }
@@ -34,7 +34,7 @@ struct node
 //User creates graph as .csv file
 void create_csv(char f1[100])
 {
-	printf("Creation of .csv file by user\n");
+	//printf("Creation of .csv file by user\n");
 	//Adjance Matrix is a square matrix n*n with n being the number of nodes in the network
 	int n,i,j,count=0;
 	printf("Enter the number of nodes in network: ");
@@ -56,6 +56,7 @@ void create_csv(char f1[100])
 	{
 			for(j=0;j<n;j++)
 			{
+				printf("Enter the cost for %d %d Edge Relation: ",i,j);
 				scanf("%d",&ds[count]);
 				//temp=ds[count]; //string because fputs only takes string as input
 				sprintf(temp,"%d",ds[count]);
@@ -276,6 +277,7 @@ printf("\n");
 ///////////////////////////////////////MAIN FUNCTION///////////////////////////
 int main()
 {
+	loading();
 int ch1,n,count;
 char f1[100];
 printf("An efficient approach to optimize Network routing using Particle Swarm Intelligence\n\n");
@@ -286,7 +288,9 @@ scanf("%d",&ch1);
 loading();
 switch(ch1)
 {
-case 1: printf("Enter Unique Name of the graph: ");
+case 1: 
+printf("User Creation of Template Network Graph\n");
+printf("Enter Unique Name of the graph: ");
 scanf("%s",&f1);
 	create_csv(f1);
 break;
