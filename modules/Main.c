@@ -143,6 +143,7 @@ void readcsv(char f1[100])
   if (filePointer == NULL) {
   	system("reset");
     printf("Selected file failed to open.");
+    exit(1);
   } else {
   	system("reset");
     printf("The file is now opened.\n");
