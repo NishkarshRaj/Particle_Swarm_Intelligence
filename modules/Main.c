@@ -269,6 +269,7 @@ int matrix[50][50];
   	printf("3. Perform PSO Algorithm\n");
   	printf("Enter your choice: ");
   	scanf("%d",&flag41);
+system("reset");
   	switch(flag41)
   	{
   		case 1:
