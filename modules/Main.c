@@ -379,6 +379,8 @@ system("reset");
   			primMST(matrix,n);
   			break;
   		case 3:
+  			printf("Particle Swarm Intelligence Algorithm Application\n");
+  			PSO(matrix,n);
   			break;
   		default: printf("Wrong Choice: Retry\n");
 	}
