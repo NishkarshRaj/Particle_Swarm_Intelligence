@@ -165,6 +165,52 @@ struct node
 	struct node *list[20]; //for Adjancy list
 };
 
+//PSO Function
+void PSO(int c[][50],int x) 
+{   
+int i,j;
+float cost[50][50];
+for(i=0;i<n;i++)
+{
+	for(j=0;j<n;j++)
+	{
+		cost[i][j]=c[i][j];
+	}
+}
+    int inMST[n]; 
+float k;
+    // Include first vertex in MST 
+    inMST[0] = 1; 
+    // Keep adding edges while number of included 
+    // edges does not become V-1. 
+    int edge_count = 0;
+float mincost = 0;
+    while (edge_count < x - 1) { 
+        // Find minimum weight valid edge.   
+        float min = INT_MAX;
+ int a = -1, b = -1; 
+        for (i = 0; i < x; i++) { 
+            for (j = 0; j < x; j++) {                
+k=random_generator();
+                if ((cost[i][j] + cost[i][j]*k) < min) { 
+                    if (isValidEdge(i, j, inMST)) { 
+                        min = (cost[i][j] + cost[i][j]*k); 
+                        a = i; 
+                        b = j; 
+                    } 
+                } 
+            } 
+        } 
+        if (a != -1 && b != -1 ) { 
+            printf("Edge %d:(%d, %d) cost: %f \n",  
+                         edge_count++, a, b, min); 
+            mincost = mincost + min; 
+            inMST[b] = inMST[a] = 1; 
+        } 
+    } 
+    printf("\n Minimum cost= %f \n", mincost); 
+}
+
 //User creates graph as .csv file
 void create_csv(char f1[100])
 {
