@@ -23,6 +23,7 @@ void union1(int i, int j)
 // Finds MST using Kruskal's algorithm
 void kruskalMST(int cost[][50],int x)
 {
+	clock_t start = clock();
     int mincost = 0; // Cost of min MST.
  
     // Initialize sets of disjoint sets.
@@ -48,7 +49,10 @@ void kruskalMST(int cost[][50],int x)
                edge_count++, a, b, min);
         mincost += min;
     }
+    clock_t end = clock();
     printf("\n Minimum cost= %d \n", mincost);
+    clock_t time = ((double) (end - start)) / CLOCKS_PER_SEC;
+    printf("Processing Time: %ld\n",time);
 }
  
 // driver program to test above function
