@@ -1,6 +1,33 @@
 #include <stdio.h> 
+#include<math.h>
+#include<stdlib.h> 
+#include<time.h>
 #define INT_MAX 100000
-int n;
+
+int n; //Declaring the N value as global variable!!!!!!!!!!!!!!!
+
+// Random function for cost in PSO
+float random_generator()
+{
+	register int x = rand(); //Using register storage class for faster access
+	//printf("%d",x); Yes every time new random integer is generated
+	//How to convert any integer number into a float between 0 and 1
+	//Divide the number by 10^(number of digits)
+	int count=0,temp;
+	temp=x; //temp holds x value because its going to change to 0 to count frequency of digits
+	while(temp>0)
+	{
+	    count++;
+	    temp=temp/10;
+	}
+	//printf("%d\n%d\n",x,count);
+	temp = pow(10,count); //using same variable again to save memory
+	float answer = (float)x/temp;
+	//printf("%f\n",answer);
+	return abs(answer);
+}
+
+//Function for Valid Edge -> Check if edge present in MST Set or not!!
 int isValidEdge(int u, int v, int* inMST) 
 { 
    if (u == v) 
@@ -11,9 +38,12 @@ int isValidEdge(int u, int v, int* inMST)
         return 0; 
    return 1; 
 }   
-void primMST(int cost[][50],int x) 
+
+//PSO Function
+void PSO(int cost[][50],int x) 
 {   
     int inMST[n]; 
+    int r,c; //iterate the cost matrix
     // Include first vertex in MST 
     inMST[0] = 1; 
     // Keep adding edges while number of included 
@@ -24,6 +54,15 @@ void primMST(int cost[][50],int x)
         int min = INT_MAX, a = -1, b = -1; 
         for (int i = 0; i < x; i++) { 
             for (int j = 0; j < x; j++) {                
+            //For each iteration, first change the cost of each edge with different random parameters
+            //formulae: edgecost = edgecost + edgecost*(random number between 0 and 1) //Cost can only increase and never decrease due to random parameters
+            for(r=0;r<x;r++)
+            {
+            	for(c=0;c<x;c++)
+            	{
+            		cost[r][c] += cost[r][c]*random_generator();
+				}
+			}
                 if (cost[i][j] < min) { 
                     if (isValidEdge(i, j, inMST)) { 
                         min = cost[i][j]; 
@@ -44,6 +83,7 @@ void primMST(int cost[][50],int x)
 } 
 int main() 
 { 
+srand(time(0)); //Declare for Randomization irrespective of time
 int i,j;
 printf("Enter number of vertex: ");
 scanf("%d",&n);
@@ -56,6 +96,6 @@ scanf("%d",&cost[i][j]);
 }
 }
     // Print the solution 
-    primMST(cost,n); 
+    PSO(cost,n); 
     return 0; 
 } 
