@@ -1,9 +1,7 @@
-#include <stdio.h>
- 
-#define V 5
-#define INT_MAX 10000
-int parent[V];
- 
+#include <stdio.h> 
+#define INT_MAX 10000  //Unreachable paths are identified using Infinity!!
+int n;
+int parent[INT_MAX];
 // Find set of vertex i
 int find(int i)
 {
@@ -23,20 +21,20 @@ void union1(int i, int j)
 }
  
 // Finds MST using Kruskal's algorithm
-void kruskalMST(int cost[][V])
+void kruskalMST(int cost[][50],int x)
 {
     int mincost = 0; // Cost of min MST.
  
     // Initialize sets of disjoint sets.
-    for (int i = 0; i < V; i++)
+    for (int i = 0; i < x; i++)
         parent[i] = i;
  
     // Include minimum weight edges one by one
     int edge_count = 0;
-    while (edge_count < V - 1) {
+    while (edge_count < x - 1) {
         int min = INT_MAX; int a = -1 ;int b = -1;
-        for (int i = 0; i < V; i++) {
-            for (int j = 0; j < V; j++) {
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < x; j++) {
                 if (find(i) != find(j) && cost[i][j] < min) {
                     min = cost[i][j];
                     a = i;
@@ -56,17 +54,23 @@ void kruskalMST(int cost[][V])
 // driver program to test above function
 int main()
 {
- 
-    int cost[][V] = {
-        { INT_MAX, 2, INT_MAX, 6, INT_MAX },
-        { 2, INT_MAX, 3, 8, 5 },
-        { INT_MAX, 3, INT_MAX, INT_MAX, 7 },
-        { 6, 8, INT_MAX, INT_MAX, 9 },
-        { INT_MAX, 5, 7, 9, INT_MAX },
-    };
- 
+//int n;
+int i,j;
+printf("Enter the number of nodes: ");
+scanf("%d",&n);
+int cost[50][50]; //hardcoding 2d array size as needed for sending to new function
+//Initialize by Int max as unreachable paths!!
+//This is to be replaced by 2D matrix made in our main code
+//Take user input!! for upper half triangle only
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+{
+scanf("%d",&cost[i][j]);
+}
+}  
     // Print the solution
-    kruskalMST(cost);
+    kruskalMST(cost,n);
  
     return 0;
 } 
