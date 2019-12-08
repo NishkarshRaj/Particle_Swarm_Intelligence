@@ -3,6 +3,8 @@
 #define INT_MAX 10000  //Unreachable paths are identified using Infinity!!
 int n;
 int parent[INT_MAX];
+
+//Kruskals Helper Function
 // Find set of vertex i
 int find(int i)
 {
@@ -11,6 +13,7 @@ int find(int i)
     return i;
 }
  
+//Kruskals Helper Function 
 // Does union of i and j. It returns
 // false if i and j are already in same
 // set.
