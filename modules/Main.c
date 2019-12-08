@@ -8,6 +8,8 @@
 #include<cstdlib>
 #define NODES 50
 
+int n; //global variable for number of edges in the graph
+
 //Loading Function
 void loading()
 {
@@ -36,7 +38,7 @@ void create_csv(char f1[100])
 {
 	//printf("Creation of .csv file by user\n");
 	//Adjance Matrix is a square matrix n*n with n being the number of nodes in the network
-	int n,i,j,count=0;
+	int i,j,count=0;
 	printf("Enter the number of nodes in network: ");
 	scanf("%d",&n);
 	int ds[100];
@@ -295,6 +297,7 @@ scanf("%s",&f1);
 	create_csv(f1);
 break;
 case 2:
+	printf("Using the already present template files for Networking\n");
 printf("Following are the existing .csv files in the current directory\n");
 ///////////// to get the .csv files in current directory
 struct dirent **namelist;
@@ -319,6 +322,8 @@ break;
 default: printf("Wrong Choice! Exiting Code\n");
 }
 //Running Module 4 Read CSV
-readcsv(f1);
+readcsv(f1); //Causing Segmentation Fault
+loading();
+printf("Thanks for using our code!");
 return 0;
 }
