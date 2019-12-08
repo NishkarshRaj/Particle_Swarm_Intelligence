@@ -300,14 +300,12 @@ printf("\n");
   system("reset");
   //////////////////////////////Till Now!! File Handling Completed!!! Also, Adjancy Matrix extracted and Its Adjancy List is created!!!!/////
   int flag41;
-  k=2;
-  do
-  {
   	system("reset");
   	printf("1. Perform Kruskal's Algorithm\n");
   	printf("2. Perform Prim's Algorithm\n");
   	printf("3. Perform PSO Algorithm\n");
   	printf("Enter your choice: ");
+	fflush(stdin);
   	scanf("%d",&flag41);
   	switch(flag41)
   	{
@@ -319,8 +317,6 @@ printf("\n");
   			break;
   		default: printf("Wrong Choice: Retry\n");
 	}
-	//system("reset");
-  }while(k--);
 }
 
 ///////////////////////////////////////MAIN FUNCTION///////////////////////////
