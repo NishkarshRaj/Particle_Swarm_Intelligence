@@ -51,7 +51,7 @@ void kruskalMST(int cost[][50],int x)
         mincost += min;
     }
     clock_t end = clock();
-    printf("\n Minimum cost= %d \n", mincost);
+    printf("\nMinimum cost= %d \n", mincost);
     double time = ((double) (end - start))/CLOCKS_PER_SEC;
     time=time*1000000;
     printf("Processing Time: %f MicroSeconds\n",time);
