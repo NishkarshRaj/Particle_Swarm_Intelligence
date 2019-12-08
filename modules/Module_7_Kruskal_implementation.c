@@ -1,4 +1,5 @@
 #include <stdio.h> 
+#include<time.h>
 #define INT_MAX 10000  //Unreachable paths are identified using Infinity!!
 int n;
 int parent[INT_MAX];
@@ -52,6 +53,7 @@ void kruskalMST(int cost[][50],int x)
     clock_t end = clock();
     printf("\n Minimum cost= %d \n", mincost);
     double time = ((double) (end - start))/CLOCKS_PER_SEC;
+    time=time*1000000;
     printf("Processing Time: %f MicroSeconds\n",time);
 }
  
