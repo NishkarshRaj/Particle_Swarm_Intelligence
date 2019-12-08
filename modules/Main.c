@@ -1,3 +1,4 @@
+//Header Files
 #include<string.h>
 #include<stdio.h>
 #include<stdlib.h>
@@ -6,6 +7,19 @@
 #include<math.h>
 #include<cstdlib>
 #define NODES 50
+
+//Loading Function
+void loading()
+{
+int i;
+char ch;
+system("reset");
+for(i=0;i<50000;i++)
+{
+printf("Loading Content: %d\n",i+1);
+}
+system("reset");
+}
 
 //Adjancy List
 //N nodes -> 0 is V1, 1 is V2,,, k is Vk+1,,,, n-1 is Vn
@@ -269,6 +283,7 @@ printf("Press 1) Create new graph\n");
 printf("Press 2) Use existing graph\n");
 printf("Enter your choice: ");
 scanf("%d",&ch1);
+loading();
 switch(ch1)
 {
 case 1: printf("Enter Unique Name of the graph: ");
