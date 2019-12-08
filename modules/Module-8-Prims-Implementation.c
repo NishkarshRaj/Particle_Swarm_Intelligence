@@ -1,10 +1,6 @@
 #include <stdio.h> 
 #define INT_MAX 100000
 int n;
-//@author: Harsh Joshi
-// Returns true if edge u-v is a valid edge to be 
-// include in MST. An edge is valid if one end is 
-// already included in MST and other is not in MST. 
 int isValidEdge(int u, int v, int* inMST) 
 { 
    if (u == v) 
