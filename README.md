@@ -2,7 +2,7 @@
 
 ## An efficient approach to find the optimal network route using Swarm Intelligence.
 
-# Members:
+## Members:
 
 1. Documentation Head: [Harsh Joshi](https://www.github.com/josharsh)
 2. Design Head: [Priyanka Yadav](https://www.github.com/Priyanka488)
