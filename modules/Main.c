@@ -120,14 +120,15 @@ void readcsv(char f1[100])
   // Check if this filePointer is null 
   // which maybe if the file does not exist 
   if (filePointer == NULL) {
-    printf("test.csv file failed to open.");
+  	system("reset");
+    printf("Selected file failed to open.");
   } else {
-
+  	system("reset");
     printf("The file is now opened.\n");
     int count = 0;
     int k = 10;
-int n,i,j;
-    char arr[NODES][NODES];
+	int i,j;
+    char arr[50][50];
     while (fgets(dataToBeRead, 50, filePointer) != NULL) {
       if (count == 0) {
         // First line of csv contains total number of nodes
@@ -157,13 +158,13 @@ int n,i,j;
 
     printf("Data successfully read from specified file\n");
     printf("The file is now closed.\n");
-    int array[k][k];
+    int array[k][k]; //n is global variable
     for (int i = 0; i < k; i++) {
       for (int j = 0; j < k; j++) {
         array[i][j] = arr[i][j] - '0';
-        printf("%d ", array[i][j]);
+        //printf("%d ", array[i][j]);
       }
-      printf("\n");
+      //printf("\n");
     }
     ////Adjancy Matrix to adjancy List
 node *ptr,*head,*p;
@@ -186,8 +187,8 @@ k=1;
 		ptr = (node*)malloc(sizeof(node));
 		//printf("Enter the Unique number for Node: ");
 		//scanf("%d",&(ptr->node_number));
-ptr->node_number=k;
-k++;
+		ptr->node_number=k;
+		k++;
 		//ptr->list=NULL;
 		ptr->next=NULL;
 		list1[i]=(node*)malloc(sizeof(node));
@@ -214,10 +215,10 @@ k++;
 	////////////////////////////////////////////////
 	//Display the Linked List
 	p=head;
-	printf("%d\n",head->node_number);
+	//printf("%d\n",head->node_number);
 	while(p->next!=NULL)
 	{
-		printf("%d\n",ptr->node_number);
+		//printf("%d\n",ptr->node_number);
 		p=p->next;
 	}
 	//printf("%d",list1[0]->node_number);
@@ -259,21 +260,23 @@ k--;
 	p=head;
 	while(p->next!=NULL)
 	{
-printf("%d: ",p->node_number);
+//printf("%d: ",p->node_number);
 		for(i=0;p->list[i]!=NULL;i++)
 		{
-			printf("%d\t",p->list[i]->node_number);
+//			printf("%d\t",p->list[i]->node_number);
 		}
 printf("\n");
 p=p->next;
 	}
-printf("%d: ",p->node_number);
+//printf("%d: ",p->node_number);
 		for(i=0;p->list[i]!=NULL;i++)
 		{
-			printf("%d\t",p->list[i]->node_number);
+//			printf("%d\t",p->list[i]->node_number);
 		}
 printf("\n");
   }
+  
+  //////////////////////////////Till Now!! File Handling Completed!!! Also, Adjancy Matrix extracted and Its Adjancy List is created!!!!/////
 }
 
 ///////////////////////////////////////MAIN FUNCTION///////////////////////////
