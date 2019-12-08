@@ -1,4 +1,4 @@
-//Header Files
+//Header Files and Macros
 #include<string.h>
 #include<stdio.h>
 #include<stdlib.h>
@@ -7,6 +7,7 @@
 #include<math.h>
 #include<cstdlib>
 #define NODES 50
+#define INT_MAX 100000
 
 int n; //global variable for number of edges in the graph
 
