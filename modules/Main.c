@@ -23,6 +23,27 @@ printf("Loading Content: %d\n",i+1);
 system("reset");
 }
 
+//Random Number Generator
+float random_generator()
+{
+	register int x = rand(); //Using register storage class for faster access
+	//printf("%d",x); Yes every time new random integer is generated
+	//How to convert any integer number into a float between 0 and 1
+	//Divide the number by 10^(number of digits)
+	int count=0,temp;
+	temp=x; //temp holds x value because its going to change to 0 to count frequency of digits
+	while(temp>0)
+	{
+	    count++;
+	    temp=temp/10;
+	}
+	//printf("%d\n%d\n",x,count);
+	temp = pow(10,count); //using same variable again to save memory
+	float answer = (float)x/temp;
+	//printf("%f\n",answer);
+	return abs(answer);
+}  
+
 //Adjancy List
 //N nodes -> 0 is V1, 1 is V2,,, k is Vk+1,,,, n-1 is Vn
 //Adjancy List ignoring loop, if connected with rest, then added in ordered fashion
@@ -304,6 +325,7 @@ printf("\n");
 ///////////////////////////////////////MAIN FUNCTION///////////////////////////
 int main()
 {
+	srand(time(0)); //Random Number initialization irrespective of time
 	loading();
 int ch1,n,count;
 char f1[100];
