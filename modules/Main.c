@@ -287,7 +287,7 @@ printf("Press 1) Create new graph\n");
 printf("Press 2) Use existing graph\n");
 printf("Enter your choice: ");
 scanf("%d",&ch1);
-loading();
+system("reset");
 switch(ch1)
 {
 case 1: 
@@ -321,9 +321,9 @@ scanf("%s",&f1);
 break;
 default: printf("Wrong Choice! Exiting Code\n");
 }
-//Running Module 4 Read CSV
+//Running Module 4 Read CSV -> For Reading the .csv file and creating a 2D array
 readcsv(f1); //Causing Segmentation Fault
-loading();
-printf("Thanks for using our code!");
+system("reset");
+printf("Thanks for using our code!\n\n");
 return 0;
 }
