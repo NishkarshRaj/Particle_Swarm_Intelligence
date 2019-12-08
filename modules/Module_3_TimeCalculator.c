@@ -8,8 +8,9 @@ clock_t start = clock();
 write the program for which you need to calculate the time used by cpu
 */
 clock_t end = clock();
-clock_t time = ((double) (end - start)) / CLOCKS_PER_SEC;    //number of processor clock ticks per second is CLOCKS_PER_SEC
-printf("%ld\n",time);
+double time = ((double)(end - start))/CLOCKS_PER_SEC;    //number of processor clock ticks per second is CLOCKS_PER_SEC
+time=time*1000000;
+printf("%f\n",time);
 }
 
 
