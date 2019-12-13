@@ -289,7 +289,7 @@ printf("%ld\n",time);
 //Module 4
 void readcsv(char f1[100])
 {
-int i,j,kk;
+int i,j,kk,count;
   // Declare the file pointer 
   FILE * filePointer;
 
@@ -310,8 +310,8 @@ int k = 50;
   } else {
   	system("reset");
     printf("The file is now opened.\n");
-    int count = 0;
-    int k = 50;
+    count = 0;
+    //int k = 50;
 	//int i,j;
 	j=0;
     //char arr[50][50];
@@ -320,10 +320,11 @@ int k = 50;
         // First line of csv contains total number of nodes
         k = atoi(dataToBeRead);
       } else {
+        int j = 0;
         int length = (int) strlen(dataToBeRead);
-        kk = 0;
+        int kk = 0;
 
-        for ( i = 0; i < length - 1; i++) {
+        for (int i = 0; i < length - 1; i++) {
           if (dataToBeRead[i] != ',') {
             kk = kk * 10 + (dataToBeRead[i] - '0');
 
@@ -348,8 +349,8 @@ int k = 50;
 
     printf("Data successfully read from specified file\n");
     printf("The file is now closed.\n");
-    for (int i = 0; i < k; i++) {
-      for (int j = 0; j < k; j++) {
+    for ( i = 0; i < k; i++) {
+      for ( j = 0; j < k; j++) {
         printf("%d ", array[i][j]);
       }
       printf("\n");
