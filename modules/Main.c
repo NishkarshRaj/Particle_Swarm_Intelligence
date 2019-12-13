@@ -295,31 +295,34 @@ int i,j=0;
 
   // Declare the variable for the data to be read from file 
   char dataToBeRead[50];
-
+int k = 50;
+  int array[k][k];
   // Open the existing file GfgTest.c using fopen() 
   // in read mode using "r" attribute 
   filePointer = fopen(f1, "r");
-  int k = 10;
-  int array[k][k];
+
   // Check if this filePointer is null 
   // which maybe if the file does not exist 
   if (filePointer == NULL) {
-    printf("test.csv file failed to open.");
+  	system("reset");
+    printf("Selected file failed to open\n Exiting the code\n\n");
+    exit(1);
   } else {
-
+  	system("reset");
     printf("The file is now opened.\n");
     int count = 0;
-
+    int k = 10;
+	int i,j;
+    char arr[50][50];
     while (fgets(dataToBeRead, 50, filePointer) != NULL) {
       if (count == 0) {
         // First line of csv contains total number of nodes
         k = atoi(dataToBeRead);
       } else {
-        //int j = 0;
         int length = (int) strlen(dataToBeRead);
         int kk = 0;
 
-        for (int i = 0; i < length - 1; i++) {
+        for ( i = 0; i < length - 1; i++) {
           if (dataToBeRead[i] != ',') {
             kk = kk * 10 + (dataToBeRead[i] - '0');
 
@@ -342,15 +345,15 @@ int i,j=0;
     // Closing the file using fclose() 
     fclose(filePointer);
 
-    printf("Data successfully read from file GfgTest.c\n");
+    printf("Data successfully read from specified file\n");
     printf("The file is now closed.\n");
-
     for (int i = 0; i < k; i++) {
       for (int j = 0; j < k; j++) {
         printf("%d ", array[i][j]);
       }
       printf("\n");
     }
+  }
     ////Adjancy Matrix to adjancy List
 node *ptr,*head,*p;
 	n=k;
