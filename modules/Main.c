@@ -289,7 +289,7 @@ printf("%ld\n",time);
 //Module 4
 void readcsv(char f1[100])
 {
-
+int i,j=0;
   // Declare the file pointer 
   FILE * filePointer;
 
@@ -315,7 +315,7 @@ void readcsv(char f1[100])
         // First line of csv contains total number of nodes
         k = atoi(dataToBeRead);
       } else {
-        int j = 0;
+        //int j = 0;
         int length = (int) strlen(dataToBeRead);
         int kk = 0;
 
@@ -332,8 +332,8 @@ void readcsv(char f1[100])
           }
         }
         array[count - 1][j] = kk;
-        //printf("%d \n", kk);
-        //printf("\n");
+        printf("%d \n", kk);
+        printf("\n");
 
       }
       count++;
@@ -347,9 +347,9 @@ void readcsv(char f1[100])
 
     for (int i = 0; i < k; i++) {
       for (int j = 0; j < k; j++) {
-        //printf("%d ", array[i][j]);
+        printf("%d ", array[i][j]);
       }
-      //printf("\n");
+      printf("\n");
     }
     ////Adjancy Matrix to adjancy List
 node *ptr,*head,*p;
@@ -367,7 +367,7 @@ int matrix[50][50];
 /////////////////Algorithms
 //////////////////////////////Till Now!! File Handling Completed!!! Also, Adjancy Matrix extracted and Its Adjancy List is created!!!!/////
   int flag41;
-  	system("reset");
+  	//system("reset");
   	printf("1. Perform Kruskal's Algorithm\n");
   	printf("2. Perform Prim's Algorithm\n");
   	printf("3. Perform PSO Algorithm\n");
