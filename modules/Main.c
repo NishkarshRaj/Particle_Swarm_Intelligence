@@ -371,7 +371,7 @@ int matrix[50][50];
 /////////////////Algorithms
 //////////////////////////////Till Now!! File Handling Completed!!! Also, Adjancy Matrix extracted and Its Adjancy List is created!!!!/////
   int flag41;
-  	//system("reset");
+  	system("reset");
   	printf("1. Perform Kruskal's Algorithm\n");
   	printf("2. Perform Prim's Algorithm\n");
   	printf("3. Perform PSO Algorithm\n");
