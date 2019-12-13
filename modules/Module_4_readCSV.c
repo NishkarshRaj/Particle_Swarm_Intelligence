@@ -15,7 +15,7 @@ int main() {
 
   // Open the existing file GfgTest.c using fopen() 
   // in read mode using "r" attribute 
-  filePointer = fopen("First.csv", "r");
+  filePointer = fopen("e.csv", "r");
   int k = 10;
   int array[k][k];
   // Check if this filePointer is null 
