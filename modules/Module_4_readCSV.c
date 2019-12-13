@@ -1,8 +1,10 @@
-#include<stdio.h> 
-#include<string.h> 
-#include<stdlib.h>     /* atoi */
+#include <stdio.h>
 
-  #define NODES 50
+#include <string.h>
+
+#include <stdlib.h>     /* atoi */
+
+#define NODES 50
 int main() {
 
   // Declare the file pointer 
@@ -14,7 +16,8 @@ int main() {
   // Open the existing file GfgTest.c using fopen() 
   // in read mode using "r" attribute 
   filePointer = fopen("First.csv", "r");
-
+  int k = 10;
+  int array[k][k];
   // Check if this filePointer is null 
   // which maybe if the file does not exist 
   if (filePointer == NULL) {
@@ -23,8 +26,7 @@ int main() {
 
     printf("The file is now opened.\n");
     int count = 0;
-    int k = 10;
-    char arr[NODES][NODES];
+
     while (fgets(dataToBeRead, 50, filePointer) != NULL) {
       if (count == 0) {
         // First line of csv contains total number of nodes
@@ -32,17 +34,22 @@ int main() {
       } else {
         int j = 0;
         int length = (int) strlen(dataToBeRead);
+        int kk = 0;
+
         for (int i = 0; i < length - 1; i++) {
-
           if (dataToBeRead[i] != ',') {
+            kk = kk * 10 + (dataToBeRead[i] - '0');
 
-            arr[count - 1][j] = dataToBeRead[i];
-
-            // make sure to print using %c 
-            printf("%c \n", arr[count - 1][j]);
+          } else {
+            array[count - 1][j] = kk;
+            printf("%d \n", kk);
+            kk = 0;
             j++;
+
           }
         }
+        array[count - 1][j] = kk;
+        printf("%d \n", kk);
         printf("\n");
 
       }
@@ -52,16 +59,16 @@ int main() {
     // Closing the file using fclose() 
     fclose(filePointer);
 
-    printf("Data successfully read from specified file\n");
+    printf("Data successfully read from file GfgTest.c\n");
     printf("The file is now closed.\n");
-    int array[k][k];
+
     for (int i = 0; i < k; i++) {
       for (int j = 0; j < k; j++) {
-        array[i][j] = arr[i][j] - '0';
         printf("%d ", array[i][j]);
       }
       printf("\n");
     }
   }
+
   return 0;
 }
