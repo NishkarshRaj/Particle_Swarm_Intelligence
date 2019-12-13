@@ -353,7 +353,6 @@ int k = 50;
       }
       printf("\n");
     }
-  }
     ////Adjancy Matrix to adjancy List
 node *ptr,*head,*p;
 	n=k;
