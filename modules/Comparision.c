@@ -527,6 +527,6 @@ default: printf("Wrong Choice! Exiting Code\n"); exit(1);
 }
 //Running Module 4 Read CSV -> For Reading the .csv file and creating a 2D array
 readcsv(f1); 
-printf("\n\nThanks for using our code!\n\n");
+//printf("\n\nThanks for using our code!\n\n");
 return 0;
 }
