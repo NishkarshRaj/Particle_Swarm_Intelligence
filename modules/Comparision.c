@@ -372,36 +372,14 @@ int matrix[50][50];
 //////////////////////////////Till Now!! File Handling Completed!!! Also, Adjancy Matrix extracted and Its Adjancy List is created!!!!/////
   int flag41,flag31=0;
 system("reset");
-  do
-  {
-  	printf("1. Perform Kruskal's Algorithm\n");
-  	printf("2. Perform Prim's Algorithm\n");
-  	printf("3. Perform PSO Algorithm\n");
-  	printf("4. Exit\n");
-  	printf("Enter your choice: ");
-  	scanf("%d",&flag41);
-system("reset");
-  	switch(flag41)
-  	{
-  		case 1:
 		  printf("Kruskal's Algorithm Application\n");
 		  kruskalMST(matrix,n); 
-  			break;
-  		case 2:
+printf("\n\n");
   			printf("Prim's Algorithm Application\n");
   			primMST(matrix,n);
-  			break;
-  		case 3:
+printf("\n\n");
   			printf("Particle Swarm Intelligence Algorithm Application\n");
   			PSO(matrix,n);
-  			break;
-  		case 4:
-  			flag31=1;
-  			break;
-  		default: printf("Wrong Choice: Retry\n");
-	}
-//system("reset");
-}while(flag31==0);
 	////////////////////////////////////////////////
 k=1;
 	//Create Linked list for all the Nodes in Network
