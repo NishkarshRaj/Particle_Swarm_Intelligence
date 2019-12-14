@@ -289,13 +289,14 @@ printf("%ld\n",time);
 //Module 4
 void readcsv(char f1[100])
 {
-
+int i,j,kk,count;
   // Declare the file pointer 
   FILE * filePointer;
 
   // Declare the variable for the data to be read from file 
   char dataToBeRead[50];
-
+int k = 50;
+  int array[k][k];
   // Open the existing file GfgTest.c using fopen() 
   // in read mode using "r" attribute 
   filePointer = fopen(f1, "r");
@@ -309,10 +310,11 @@ void readcsv(char f1[100])
   } else {
   	system("reset");
     printf("The file is now opened.\n");
-    int count = 0;
-    int k = 10;
-	int i,j;
-    char arr[50][50];
+    count = 0;
+    //int k = 50;
+	//int i,j;
+	j=0;
+    //char arr[50][50];
     while (fgets(dataToBeRead, 50, filePointer) != NULL) {
       if (count == 0) {
         // First line of csv contains total number of nodes
@@ -320,17 +322,22 @@ void readcsv(char f1[100])
       } else {
         int j = 0;
         int length = (int) strlen(dataToBeRead);
+        int kk = 0;
+
         for (int i = 0; i < length - 1; i++) {
-
           if (dataToBeRead[i] != ',') {
+            kk = kk * 10 + (dataToBeRead[i] - '0');
 
-            arr[count - 1][j] = dataToBeRead[i];
-
-            // make sure to print using %c 
-            printf("%c \n", arr[count - 1][j]);
+          } else {
+            array[count - 1][j] = kk;
+            printf("%d \n", kk);
+            kk = 0;
             j++;
+
           }
         }
+        array[count - 1][j] = kk;
+        printf("%d \n", kk);
         printf("\n");
 
       }
@@ -342,13 +349,11 @@ void readcsv(char f1[100])
 
     printf("Data successfully read from specified file\n");
     printf("The file is now closed.\n");
-    int array[k][k]; //n is global variable
-    for (int i = 0; i < k; i++) {
-      for (int j = 0; j < k; j++) {
-        array[i][j] = arr[i][j] - '0';
-        //printf("%d ", array[i][j]);
+    for ( i = 0; i < k; i++) {
+      for ( j = 0; j < k; j++) {
+        printf("%d ", array[i][j]);
       }
-      //printf("\n");
+      printf("\n");
     }
     ////Adjancy Matrix to adjancy List
 node *ptr,*head,*p;
@@ -365,11 +370,14 @@ int matrix[50][50];
 	}
 /////////////////Algorithms
 //////////////////////////////Till Now!! File Handling Completed!!! Also, Adjancy Matrix extracted and Its Adjancy List is created!!!!/////
-  int flag41;
+  int flag41,flag31=0;
+  do
+  {
   	system("reset");
   	printf("1. Perform Kruskal's Algorithm\n");
   	printf("2. Perform Prim's Algorithm\n");
   	printf("3. Perform PSO Algorithm\n");
+  	printf("4. Exit");
   	printf("Enter your choice: ");
   	scanf("%d",&flag41);
 system("reset");
@@ -387,8 +395,12 @@ system("reset");
   			printf("Particle Swarm Intelligence Algorithm Application\n");
   			PSO(matrix,n);
   			break;
+  		case 4:
+  			flag31=1;
+  			break;
   		default: printf("Wrong Choice: Retry\n");
 	}
+}while(flag31==0);
 	////////////////////////////////////////////////
 k=1;
 	//Create Linked list for all the Nodes in Network
