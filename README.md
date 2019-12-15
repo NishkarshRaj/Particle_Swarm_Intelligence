@@ -9,6 +9,10 @@
 3. Implementation Head: [Nishkarsh Raj](https://www.github.com/NishkarshRaj)
 4. Testing Head: [Lakshika Parihar](https://www.github.com/lakshika1064)
 
-# License: 
+## Future Scope
+
+1. Use of graphics library to visualize the graphs
+
+## License: 
 
 Authorized [MIT](LICENSE) License 
