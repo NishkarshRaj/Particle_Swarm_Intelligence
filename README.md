@@ -2,12 +2,16 @@
 
 ## An efficient approach to find the optimal network route using Swarm Intelligence.
 
-## Members:
+## Contributors:
 
-1. Documentation Head: [Harsh Joshi](https://www.github.com/josharsh)
-2. Design Head: [Priyanka Yadav](https://www.github.com/Priyanka488)
-3. Implementation Head: [Nishkarsh Raj](https://www.github.com/NishkarshRaj)
-4. Testing Head: [Lakshika Parihar](https://www.github.com/lakshika1064)
+1. [Nishkarsh Raj](https://www.github.com/NishkarshRaj)
+2. [Priyanka Yadav](https://www.github.com/Priyanka488)
+3. [Harsh Joshi](https://www.github.com/josharsh)
+4. [Lakshika Parihar](https://www.github.com/lakshika1064)
+
+## How to Contribute:
+
+[Contribution Guideline](CONTRIBUTING.md)
 
 ## Future Scope
 
