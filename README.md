@@ -16,6 +16,10 @@ In Particle Swarm Optimization Algorithm, a subset of Swarm Intelligence, we opt
 
 Particle Swarm Optimization algorithm implementation on network routing gives fast convergence speed, has an easy implementation, is cognitive and supports dynamic traffic.
 
+## PSO Algorithm
+
+![PSO Flowchart](img/Flowchart_Basic_PSO.jpg)
+
 ## Contributors:
 
 1. [Nishkarsh Raj](https://www.github.com/NishkarshRaj)
