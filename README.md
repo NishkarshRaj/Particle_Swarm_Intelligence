@@ -1,6 +1,6 @@
-# Minor Project I
-
 ## An efficient approach to find the optimal network route using Swarm Intelligence.
+
+Using the Particle Swarm Intelligence algorithm to manage dynamic nature of network routing.
 
 ## Contributors:
 
@@ -12,10 +12,6 @@
 ## How to Contribute:
 
 [Contribution Guideline](CONTRIBUTING.md)
-
-## Future Scope
-
-1. Use of graphics library to visualize the graphs
 
 ## License: 
 
